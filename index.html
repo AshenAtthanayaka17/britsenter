@@ -3,9 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Britsenter - Movie List</title>
+    <title>Movie Library - Movie Collection</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" type="image/png" href="https://img.icons8.com/?size=100&id=FoDhNGl8I5hv&format=png&color=000000">
     <style>
         /* Import Inter font and dark theme background */
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
@@ -55,13 +56,16 @@
 </head>
 <body class="text-slate-200">
 
+    <!--Notice Bar-->
+    <h6 class="text-center text-yellow-400 font-bold py-2 bg-red-900">🔔 Site will be offline from 30th Nov to 26th Dec due to server changes !</h6>
+
     <!-- Navbar -->
     <nav class="sticky top-0 z-50 bg-slate-900/95 backdrop-blur-md border-b border-slate-800 shadow-xl">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex items-center justify-between h-16">
                 <div class="flex items-center gap-3 cursor-pointer transition-opacity hover:opacity-80" onclick="resetApp()">
                     <i class="fa-solid fa-clapperboard text-3xl text-indigo-500"></i>
-                    <span class="text-xl font-extrabold tracking-wide text-white">Britsenter<span class="text-indigo-500 font-bold">Listings</span></span>
+                    <span class="text-xl font-extrabold tracking-wide text-white">Movie<span class="text-indigo-500 font-bold">Library</span></span>
                 </div>
                 
                 <!-- Desktop Search -->
@@ -143,7 +147,7 @@
         <!-- No Results State -->
         <div id="noResults" class="hidden flex flex-col items-center justify-center py-20 text-slate-500 bg-slate-800/50 rounded-xl mt-10">
             <i class="fa-solid fa-search-minus text-6xl mb-4 opacity-50 text-indigo-400"></i>
-            <p class="text-xl font-semibold">No listings match your search.</p>
+            <p class="text-xl font-semibold">No movie match your search.</p>
             <p class="text-sm">Please try a different keyword or genre filter.</p>
             <button onclick="resetApp()" class="mt-6 px-4 py-2 bg-indigo-600 hover:bg-indigo-500 text-white rounded-lg transition-colors font-medium shadow-md">
                 Clear Filters & Search
@@ -160,7 +164,7 @@
                 <div class="col-span-2 md:col-span-1">
                     <div class="flex items-center gap-2 mb-3">
                         <i class="fa-solid fa-clapperboard text-2xl text-indigo-500"></i>
-                        <span class="text-xl font-extrabold tracking-wide text-white">Britsenter<span class="text-indigo-500 font-bold">Listings</span></span>
+                        <span class="text-xl font-extrabold tracking-wide text-white">Movie<span class="text-indigo-500 font-bold">Library</span></span>
                     </div>
                     <p class="text-sm text-slate-400">Your trusted source for the latest movie listings and information.</p>
                 </div>
@@ -208,7 +212,7 @@
 
             <!-- Copyright and Legal -->
             <div class="text-center text-slate-500">
-                <p class="mb-2 text-sm">&copy; 2025 Britsenter Listings. All rights reserved.</p>
+                <p class="mb-2 text-sm">&copy; 2025 AshenAtthanayaka17. All rights reserved.</p>
                 <p class="text-xs">Data is for demonstration purposes only.</p>
             </div>
         </div>
@@ -305,97 +309,6 @@
                 cast: "Daniel Radcliffe, Emma Watson, Rupert Grint",
                 description: "Harry Potter, an eleven-year-old orphan, discovers that he is a wizard and is invited to study at Hogwarts. Even as he escapes a dreary life and enters a world of magic, he finds trouble awaiting him. This first installment sets the stage for a spectacular magical journey.",
                 image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQttbZNVGzKnwLBGXrKBkt0VY2J2DubjnH_lSQrJCzdSf5fe4OK8yUM27EYhteFc68Ii7Xr9g&s=10" 
-            },
-            {
-                id: 2,
-                title: "Harry Potter and the Chamber of Secrets",
-                genre: "Family/Fantasy",
-                year: 2002,
-                rating: 7.5,
-                age: "PG",
-                duration: "2h 41m",
-                director: "Chris Columbus",
-                cast: "Daniel Radcliffe, Emma Watson, Rupert Grint, Kenneth Branagh",
-                description: "A house-elf warns Harry against returning to Hogwarts, but he decides to ignore it. When students and creatures at the school begin to get petrified, Harry finds himself surrounded in mystery, culminating in a dangerous confrontation in the Chamber of Secrets.",
-                image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT1rI0fB3GdfQCFT3HYWrIIreGt74rV1R0n8JgYUmXtzMeOCdIKv4MdmSafc0hi7DksbRtO&s=10" 
-            },
-            {
-                id: 3,
-                title: "Aladdin: A New World",
-                genre: "Family/Fantasy",
-                year: 2019,
-                rating: 6.9,
-                age: "PG",
-                duration: "2h 8m",
-                director: "Guy Ritchie",
-                cast: "Will Smith, Mena Massoud, Naomi Scott",
-                description: "Aladdin, a kind thief, woos Jasmine, the princess of Agrabah, with the help of Genie. When Jafar, the grand vizier, tries to usurp the king, Jasmine, Aladdin and Genie must stop him from succeeding in this live-action retelling.",
-                image: "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcQN7rKaiXV3ch73i1CfzmnQmtyIeXv1cP_FMrzNWmdYvvSI870W" 
-            },
-            {
-                id: 4,
-                title: "The Silent Watcher",
-                genre: "Horror",
-                year: 2024,
-                rating: 8.1,
-                age: "R",
-                duration: "1h 45m",
-                director: "Eliza Thorne",
-                cast: "Ava Jenkins, Michael Cross",
-                description: "A group of friends travel to a secluded cabin for a weekend getaway, only to find themselves hunted by an unseen entity. The suspense builds as they realize their only escape is through understanding the watcher's terrifying rules.",
-                image: "https://placehold.co/300x450/1e293b/94a3b8?text=Horror+Poster" 
-            },
-            {
-                id: 5,
-                title: "Cosmic Drift",
-                genre: "Sci-Fi",
-                year: 2023,
-                rating: 9.2,
-                age: "PG-13",
-                duration: "2h 20m",
-                director: "Kaelen Voss",
-                cast: "Zoe Saldana, Ryan Gosling",
-                description: "In the distant future, a lone space pilot discovers a wormhole that leads to a parallel universe, forcing him to choose between his family and saving all of known existence.",
-                image: "https://placehold.co/300x450/4f46e5/ffffff?text=Sci-Fi+Poster" 
-            },
-            {
-                id: 6,
-                title: "City of Shadows",
-                genre: "Action",
-                year: 2024,
-                rating: 7.9,
-                age: "R",
-                duration: "1h 55m",
-                director: "Marcus King",
-                cast: "Jackie Chan, Keanu Reeves",
-                description: "An ex-cop living in self-imposed exile must return to the neon-drenched streets of Neo-Kyoto to confront the gang that betrayed him, utilizing breathtaking martial arts and high-tech gadgets.",
-                image: "https://placehold.co/300x450/000000/ef4444?text=Action+Poster" 
-            },
-            {
-                id: 7,
-                title: "A Quiet Reflection",
-                genre: "Drama",
-                year: 2022,
-                rating: 8.8,
-                age: "PG",
-                duration: "2h 5m",
-                director: "Lena Sharma",
-                cast: "Viola Davis, Tom Hanks",
-                description: "A poignant story about a professor who retires to his childhood home and reflects on the choices that shaped his life, leading to a final, profound reconciliation with his past.",
-                image: "https://placehold.co/300x450/334155/e2e8f0?text=Drama+Poster" 
-            },
-            {
-                id: 8,
-                title: "The Misadventures of Barry",
-                genre: "Comedy",
-                year: 2023,
-                rating: 6.5,
-                age: "PG-13",
-                duration: "1h 35m",
-                director: "Jenny Fields",
-                cast: "Barry Allen, Cecile Horton",
-                description: "Barry, an overly optimistic but disaster-prone accountant, accidentally invents a time machine that can only travel 5 minutes into the past, leading to hilarious and escalating temporal paradoxes.",
-                image: "https://placehold.co/300x450/eab308/000000?text=Comedy+Poster" 
             }
         ];
 
